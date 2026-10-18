@@ -5,7 +5,7 @@
   --max-width: 1200px;
   --ink: #2b2452;
   --muted: #132030;
-  --accent: hsl(263, 41%, 35%);
+  --accent: hsl(264, 25%, 40%);
   --accent-ink: #03284b;
   --line: #e4e3ea;
   --bg: #ffffff;
@@ -694,15 +694,6 @@ h1 {
 }
 
 /* ============ Profile photo ============ */
-/*
-.profile {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 100px;
-  display: flex;
-  justify-content: flex-end;   
-}
-*/
 
 .profile__wrapper { 
   margin: 0 auto;
