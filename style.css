@@ -5,13 +5,13 @@
   --max-width: 1200px;
   --ink: #2b2452;
   --muted: #132030;
-  --accent: hsl(263, 96%, 70%);
+  --accent: hsl(263, 41%, 35%);
   --accent-ink: #03284b;
   --line: #e4e3ea;
   --bg: #ffffff;
   --field: #fefeff;
   --nav-bg: rgb(239, 239, 240);
-  --underline: #fcc550;
+  --underline: #fcb750;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,7 +39,9 @@ body {
   background: var(--bg);
 }
 
-button, input { font: inherit; }
+button, input { 
+  font: inherit;
+}
 
 /* ============ Nav ============ */
 .nav {
@@ -56,7 +58,10 @@ button, input { font: inherit; }
   border-bottom: 1px solid var(--line);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
-.nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.nav a:focus-visible { 
+  outline: 2px solid var(--accent); 
+  outline-offset: 3px; 
+}
 
 .brand {
   display: flex;
@@ -107,6 +112,7 @@ button, input { font: inherit; }
   flex-direction: row;
   align-items: stretch;
   gap: 48px;
+  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.35);
 }
 .about__Color{
   color: rgb(3, 130, 233);
@@ -198,6 +204,7 @@ h1 {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 64px 24px;
+  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.35);
 }
 
 .features__header {
@@ -277,7 +284,6 @@ h1 {
   .features__header { 
     margin-bottom: 40px; }
 }
-/*     quality work      */
 /* ============ Quality Work ============ */
 .quality {
   max-width: var(--max-width);
@@ -368,6 +374,7 @@ h1 {
   flex-direction: row;
   align-items: stretch;
   gap: 48px;
+  box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.35);
 }
 .started__left { 
   flex: 1 1 0; 
@@ -464,6 +471,7 @@ h1 {
   flex-direction: row;
   align-items: stretch;
   gap: 48px;
+  box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.35);
 }
 .values__left {
   flex: 0 0 40%;               /* same 40% / remainder split as About */
@@ -519,6 +527,7 @@ h1 {
   max-width: var(--max-width); 
   margin: 0 auto; 
   padding: 64px 24px; 
+  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.35);
 }
 .pricing h2 { 
   text-align: center; 
@@ -685,29 +694,33 @@ h1 {
 }
 
 /* ============ Profile photo ============ */
+/*
 .profile {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 100px;
   display: flex;
-  justify-content: flex-end;   /* pushes the photo to the right edge of the 1200px width */
+  justify-content: flex-end;   
 }
-.profile__card { 
-  float: inline-start;
-  margin-right: 33.3333vw;
+*/
+
+.profile__wrapper { 
+  margin: 0 auto;
   text-align: center; 
+  max-width: 100%;
 }
-.profile__img {
+.profile__wrapper img {
   display: block;
   width: 160px;
   height: 160px;
+  margin: 40px auto;
   flex-shrink: 0;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.35);
 }
-.profile__name {
-  margin-top: 10px;
+.profile__wrapper figcaption {
+  gap: 0;
   font-size: 15px;
   font-weight: 600;
   color: var(--ink);
