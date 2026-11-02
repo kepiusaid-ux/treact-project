@@ -176,7 +176,7 @@ h1 {
   padding: 14px 22px;
   font-weight: 600;
   cursor: pointer;
-  color: var(--accent-ink);
+  color: whitesmoke;
   background: var(--accent);
   border: 0;
   border-radius: 8px;
@@ -448,7 +448,7 @@ h1 {
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.15);
-  color: var(--accent-ink);
+  color: whitesmoke;
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -705,7 +705,49 @@ h1 {
   .actions { gap: 14px; }
   .actions a:not(.keep) { display: none; }
 }
+/* ============ Special price swap ============ */
+.plan__price--special {
+  display: none;
+  color: #c0392b;
+}
 
+/* On button hover: hide the regular price, show the special price */
+#highlight:has(.select--alt:hover) .plan__price:not(.plan__price--special),
+#highlight:has(.select--alt:focus-visible) .plan__price:not(.plan__price--special) {
+  display: none;
+}
+#highlight:has(.select--alt:hover) .plan__price--special,
+#highlight:has(.select:focus-visible) .plan__price--special {
+  display: block;
+}
+
+/* ============ Banner flash on button hover ============ */
+@keyframes bannerFlash {
+  0%, 100% { opacity: 1;    filter: brightness(1); }
+  50%      { opacity: 0.35; filter: brightness(1.4); }
+}
+
+#highlight:has(.select--alt:hover) .banner {
+  animation: bannerFlash 0.7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #highlight:has(.select--alt:hover) .banner { animation: none; }
+}
+
+/* ============ Banner flash on button hover ============ */
+@keyframes bannerFlash {
+  0%, 100% { opacity: 1;    filter: brightness(1); }
+  50%      { opacity: 0.35; filter: brightness(1.4); }
+}
+
+#highlight:has(.select:hover) .banner {
+  animation: bannerFlash 0.7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #highlight:has(.select:hover) .banner { animation: none; }
+}
 /* ============ Profile photo ============ */
 
 .profile__wrapper { 
