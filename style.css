@@ -16,19 +16,32 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0e1626; --ink: #eaf0fb; --muted: #9fb0c9; --accent: #5b8cff;
-    --accent-ink: #0b1220; --field: #17223a; --line: #2a3a58;
+    --bg: #0e1626; 
+    --ink: #eaf0fb; 
+    --muted: #9fb0c9; 
+    --accent: #5b8cff;
+    --accent-ink: #0b1220; 
+    --field: #17223a; 
+    --line: #2a3a58;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0e1626; --ink: #eaf0fb; --muted: #9fb0c9; --accent: #5b8cff;
-  --accent-ink: #0b1220; --field: #17223a; --line: #2a3a58;
+  --bg: #0e1626; 
+  --ink: #eaf0fb; 
+  --muted: #9fb0c9; 
+  --accent: #5b8cff;
+  --accent-ink: #0b1220; 
+  --field: #17223a; 
+  --line: #2a3a58;
 }
 
 /* ============ Base ============ */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+html { 
+  scroll-padding-top: env(safe-area-inset-top, 0px); 
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -112,7 +125,7 @@ button, input {
   flex-direction: row;
   align-items: stretch;
   gap: 48px;
-  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.35);
+  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.15);
 }
 .about__Color{
   color: rgb(3, 130, 233);
@@ -195,7 +208,7 @@ h1 {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 420px;
+  min-height: 420px; 
   object-fit: contain;
   border-radius: 16px;
 }
@@ -204,7 +217,7 @@ h1 {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 64px 24px;
-  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.35);
+  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.1);
 }
 
 .features__header {
@@ -334,7 +347,7 @@ h1 {
   padding: 14px 28px;
   border-radius: 8px;
   background: var(--accent);
-  box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.1);
   color: var(--accent-ink);
   font-weight: 600;
   text-decoration: none;
@@ -374,7 +387,7 @@ h1 {
   flex-direction: row;
   align-items: stretch;
   gap: 48px;
-  box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.1);
 }
 .started__left { 
   flex: 1 1 0; 
@@ -434,7 +447,7 @@ h1 {
   height: 44px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.15);
   color: var(--accent-ink);
   font-weight: 600;
   font-size: 1.1rem;
@@ -471,7 +484,7 @@ h1 {
   flex-direction: row;
   align-items: stretch;
   gap: 48px;
-  box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.15);
 }
 .values__left {
   flex: 0 0 40%;               /* same 40% / remainder split as About */
@@ -527,7 +540,7 @@ h1 {
   max-width: var(--max-width); 
   margin: 0 auto; 
   padding: 64px 24px; 
-  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.35);
+  box-shadow: 8px 8px 16px 4px rgba(28, 28, 29, 0.15);
 }
 .pricing h2 { 
   text-align: center; 
@@ -555,7 +568,7 @@ h1 {
   flex: 0 0 300px;
   padding: 28px;
   border-radius: 12px;
-  box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 8px 8px 16px 4px rgba(0, 0, 0, 0.15);
 }
 .plan h3 { 
   margin: 0 0 4px; 
